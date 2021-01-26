@@ -1,0 +1,55 @@
+.header-desktop-logo{
+    width: 91px;
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    img{
+        width: 100%;
+    }
+}
+
+.header-desktop-nav{
+    display: flex;
+    align-items: center;
+    
+    ul{
+        list-style: none;
+        margin-right: 35px;
+        padding-left: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.header-bg{
+    background-color: #fc1498;
+}
+
+.banner-container{
+    max-width: 1140px;
+
+    @media screen and (max-width: 1200px){
+        max-width: 860px;
+    }
+
+    @media screen and (max-width: 900px){
+        max-width: 660px;
+    }
+}
+
+.ad-image{
+    display: block;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.topbar-icon{
+    display: block;
+    width: 20px;
+}
+
+.city-input-text{
+    display: flex;
+}

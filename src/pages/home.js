@@ -1,11 +1,38 @@
-import React from 'react'
+import React from 'react';
+import Banner from '../components/Banner';
+import TopBar from '../components/TopBar';
+import InputSearch from '../components/InputSearch';
+import DateInput from '../components/DateInput';
+import CardCaroulsel from '../components/CardCaroulsel';
+import { SliderData } from '../assets/images/sliderData';
 
 const Home = (props) =>{
     return(
         <div>
-            <h2> novo emprego </h2>
+            <div className="container">
+                <Banner/>
+            </div>
 
-            <p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem</p>
+            <header>
+                <TopBar/>
+            </header>
+
+
+            <main>
+                <div>here should have the announce-top</div>
+                <div className="search-container">
+                    <InputSearch/>
+
+                    <DateInput/>
+                </div>
+
+                <section>
+                    <CardCaroulsel slides={SliderData}/>
+                </section>
+
+            </main>
+
+
         </div>
     )
 }
