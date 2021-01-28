@@ -3,7 +3,9 @@ import Banner from '../components/Banner';
 import TopBar from '../components/TopBar';
 import InputSearch from '../components/InputSearch';
 import DateInput from '../components/DateInput';
-import CardCaroulsel from '../components/CardCaroulsel';
+import MainCarousel from '../components/MainCarousel';
+import CardsCarousel from '../components/CardsCarousel';
+import FooterPage from '../components/FooterPage';
 import { SliderData } from '../assets/images/sliderData';
 
 const Home = (props) =>{
@@ -26,11 +28,16 @@ const Home = (props) =>{
                     <DateInput/>
                 </div>
 
-                <section>
-                    <CardCaroulsel slides={SliderData}/>
+                <section className="full-width">
+                    <MainCarousel slides={SliderData}/>
+                    <CardsCarousel slides={SliderData}/>
                 </section>
 
             </main>
+
+            <footer className="mt-5">
+                <FooterPage/>
+            </footer>
 
 
         </div>

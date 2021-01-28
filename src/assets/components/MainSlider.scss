@@ -1,0 +1,49 @@
+.slider{
+    position: relative;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-list{
+    // width: calc(100% - 80px);
+}
+
+.image-slider{
+    width: 100%;
+    border-radius: 30px;
+}
+
+.container-arrow{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    .arrow{
+        position: relative;
+        font-size: 3rem;
+        color: #000;
+        z-index: 10;
+        cursor: pointer;
+        user-select: none;
+    }
+}
+
+.rigth-arrow{
+
+}
+
+.left-arrow{
+
+}
+
+.slide{
+    opacity: 0;
+    transition-duration: 2s;
+}
+
+.active{
+    opacity: 1;
+    transition-duration: 2s;
+    transform: scale(1);
+}

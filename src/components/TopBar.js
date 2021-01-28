@@ -5,7 +5,7 @@ import FormLocation from './FormLocation'
 const TopBar = (props) =>{
     return(
         <div className="header-bg">
-            <div className="banner-container d-flex ac space-between">
+            <div className="banner-container d-flex ac justify-content-between">
                 <div>
                     <Link to="/" className="header-desktop-logo">
                         <img src="https://admitone.com/static/media/admit1-white-logo.ed8f0834.png" alt="Admit One Logo"/>

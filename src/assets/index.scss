@@ -3,13 +3,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap');
 @import './components/Topbar.scss';
 @import './components/Input.scss';
-@import './components/Slider.scss';
+@import './components/MainSlider.scss';
+@import './components/CardsSlider.scss';
 
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box; // 1
+    box-sizing: border-box; // 1
+}
+
+a{
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: rgb(28, 28, 28);
+    color: rgb(255, 255, 255);
+}
+
+footer{
+    border-top: 1px solid #fc1498;
+}
+
+.navbar-nav{
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    display: flex;
+}
+
+.footer-nav{
+    flex-direction: row;
+
+    li{
+        margin-right: 1rem;
+    }
 }
 
 .ad-container{
@@ -23,21 +67,19 @@
 
 .container{
     
-    @media screen and (max-width: 1200px){
+    @media (min-width: 576px){
+        max-width: 540px;
+    }
+    @media (min-width: 768px){
+        max-width: 720px;
+    }
+    @media (min-width: 992px){
+        max-width: 960px;
+    }
+    @media (min-width: 1200px){
         max-width: 1140px;
     }
 
-    @media screen and (max-width: 992px){
-        max-width: 960px;
-    }
-
-    @media screen and (max-width: 768px){
-        max-width: 720px;
-    }
-
-    @media screen and (max-width: 576px){
-        max-width: 540px;
-    }
 }
 
 .mw-w-100{
@@ -98,37 +140,14 @@
     color: #1976d2;
 }
 
-.clr-sucess{
-    color: #4caf50 !important;
+.clr-green{
+    color: #20b327 !important;
 }
 
 .pointer{
     cursor: pointer;
 }
 
-a{
-    color: #007bff;
-    text-decoration: none;
-    background-color: transparent;
-}
-
-p{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-}
-
-h1, h2, h3, h4, h5{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-}
-
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background: rgb(28, 28, 28);
-    color: rgb(255, 255, 255);
-}
 
 .flex{
     display: flex !important;
@@ -142,6 +161,12 @@ body{
     fill: #fff;
     color: #fff;
     stroke: #fff;
+}
+
+.icon-color-main svg{
+    fill: #fc1498;
+    color: #fc1498;
+    stroke: #fc1498;
 }
 
 .full-width{
