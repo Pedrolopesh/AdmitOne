@@ -16,23 +16,25 @@
 
 .card{
     width: 350px;
-    height: 270px;
+    height: 310px;
     border-radius: 16px;
     overflow: hidden;
     cursor: pointer;
     position: relative;
+    border: 2px solid #fc1498;
     
     .card-image{
-        height: 270px;
+        height: 310px;
         position: absolute;
         top:0;
         left: 0;
         width: 100%;
         z-index: 2;
-        background-color: #000;
+        // background-color: #000;
         transition: 0.5s;
 
         .image-box{
+            border-radius: 16px;
             
             img{
                 width: 100%;
@@ -48,6 +50,8 @@
     }
     
     &:hover{
+        box-shadow: 4px 1px 6px rgba(72,70,70,.38);
+        
         img{
             opacity: 0.4;
             transition: 0.5s;
@@ -64,7 +68,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -100%);
     z-index: 3;
     display: flex;
 
@@ -72,14 +76,15 @@
         list-style: none;
         a{
             position: relative;
+            border-radius: 10px;
             display: block;
             width: 50px;
             height: 50px;
             line-height: 50px;
             text-align: center;
-            background: #fff;
+            background: #fc1498;
             font-size: 23px;
-            color: #333;
+            color:#fff;
             font-weight: bold;
             margin: 0 6px;
             transition: 0.4s;
@@ -100,18 +105,18 @@
     transition: 0.8s;
     &:hover{
         transform: translateY(360deg);
-        color: #fc1498;
+        color: #fff;
     }
 }
 
 .card:hover li:nth-child(1) a{
-    transition-delay: 0.2s;
+    transition-delay: 0.1s;
 }
 
 .card:hover li:nth-child(2) a{
-    transition-delay: 0.3s;
+    transition-delay: 0.2s;
 }
 
 .card:hover li:nth-child(3) a{
-    transition-delay: 0.4s;
+    transition-delay: 0.3s;
 }
