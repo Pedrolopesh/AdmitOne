@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap');
 @import './components/Topbar.scss';
 @import './components/Input.scss';
+@import './components/InputCitySearch.scss';
 @import './components/MainSlider.scss';
 @import './components/Cards.scss';
 @import './components/CardsSlider.scss';
@@ -57,16 +58,6 @@ footer{
         margin-right: 1rem;
     }
 }
-
-.ad-container{
-    // max-width: 970px;
-    // width: 100%;
-    // position: relative;
-    // z-index: 150;
-    // margin-bottom: 5px;
-    // margin-top: 5px;
-}
-
 .container{
     
     @media (min-width: 576px){
@@ -181,4 +172,37 @@ footer{
 
 .announces-container{
     display: block;
+}
+
+.btn{
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+
+    &:hover{
+        text-decoration: none;
+    }
+} 
+
+.btn:not(:disabled):not(.disabled){
+    cursor: pointer;
+}
+
+.btn-ticket{
+    background: #fc1498!important;
+    text-transform: uppercase;
+    border-radius: 100px;
+    padding: .375rem 1.75rem;
+    transition: all .3s;
+
+    &:hover{
+        opacity: .6;
+    }
 }
