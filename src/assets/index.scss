@@ -1,18 +1,26 @@
 @import './_align.scss';
 @import './fonts';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap');
+
 @import './components/Topbar.scss';
 @import './components/Input.scss';
 @import './components/InputCitySearch.scss';
+
 @import './components/MainSlider.scss';
-@import './components/Cards.scss';
 @import './components/CardsSlider.scss';
+
+@import './components/AnnounceTop.scss';
+@import './components/Cards.scss';
+@import './components/MobileMenu.scss';
 
 
 *,
 *::before,
 *::after {
     box-sizing: border-box; // 1
+}
+ul{
+    list-style: none;
 }
 
 a{
@@ -56,23 +64,24 @@ footer{
 
     li{
         margin-right: 1rem;
-    }
-}
-.container{
-    
-    @media (min-width: 576px){
-        max-width: 540px;
-    }
-    @media (min-width: 768px){
-        max-width: 720px;
-    }
-    @media (min-width: 992px){
-        max-width: 960px;
-    }
-    @media (min-width: 1200px){
-        max-width: 1140px;
+        @media screen and (max-width: 700px){
+            margin: 0;
+        }
     }
 
+    @media screen and (max-width: 700px){
+        flex-direction: column;
+        align-items: center;
+
+        li{
+            margin-top: 10px;
+        }
+    }
+}
+
+.container{
+    width: 1140px;
+    max-width: calc(100% - 80px);
 }
 
 .mw-w-100{
@@ -114,6 +123,10 @@ footer{
 }
 
 .d-flex{
+    display: flex;
+}
+
+.d-grid{
     display: flex;
 }
 
@@ -170,10 +183,6 @@ footer{
     max-width: 100%;
 }
 
-.announces-container{
-    display: block;
-}
-
 .btn{
     display: inline-block;
     font-weight: 400;
@@ -205,4 +214,27 @@ footer{
     &:hover{
         opacity: .6;
     }
+}
+
+
+.light-theme{
+    body{
+        background: rgb(255, 255, 255) !important
+    }
+
+    p{
+        color: black;
+    }
+    
+    h1, h2, h3, h4, h5{
+        color: black;
+    }
+
+    span, a{
+        color: black;
+    }
+}
+
+.close-icon{
+    width: 30px;
 }

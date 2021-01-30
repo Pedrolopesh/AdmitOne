@@ -1,5 +1,6 @@
 import React from 'react';
 import SeacrhIcon from '../assets/icons/SeacrhIcon';
+import { returnIcon } from '../assets/icons/icons'
 const InputSearch = (props) => {
     return(
         <>
@@ -16,11 +17,13 @@ const InputSearch = (props) => {
                             placeholder="Search Events, Artists, Genres..." 
                             name="title" 
                             id="title" 
-                        /> 
+                        />
                         
                         </div>
                         <div className="search-btn">
-                            <SeacrhIcon/>
+                            <span className="topbar-icon icon-color-white">
+                                {returnIcon('search-fill')}
+                            </span>
                         </div>
                     </div>
                 </div>

@@ -43,6 +43,9 @@
 }
 
 // ============== MARGINS TOP ==============
+.mt-0-5{
+    margin-top: 5px !important;
+}
 .mt-0{
     margin-top: 0px !important;
 }
@@ -240,6 +243,10 @@
     margin-right: auto;
 }
 
+.mr-0-5{
+    margin-right: 5px;
+}
+
 .mr-1{
     margin-right: 10px;
 }
@@ -299,4 +306,18 @@
 
 .justify-content-center{
     justify-content: center;
+}
+
+.icon-size-20{
+    svg{
+        width: 20px;
+        font-size: 20px;
+    }
+}
+
+.icon-size-30{
+    svg{
+        width: 30px;
+        font-size: 30px;
+    }
 }

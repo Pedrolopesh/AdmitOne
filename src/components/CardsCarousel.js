@@ -1,15 +1,40 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Slider from 'react-slick';
+import { returnIcon } from '../assets/icons/icons';
 import GlobalCard from './GlobalCard';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import { SliderData } from '../assets/images/sliderData';
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/all';
-
 
 const CardsCarousel = (props) => {
+    function SampleNextArrow(props) {
+      const { className, style, onClick } = props;
+      return (
+        <div
+          className={className + " carousel-chevron-icons"}
+          style={{ ...style, display: "block", width:"10px" }}
+          onClick={onClick}
+        >
+          {returnIcon('chevron-rigth')}
+        </div>
+      );
+    }
+    
+    function SamplePrevArrow(props) {
+      const { className, style, onClick } = props;
+      return (
+        <div
+          className={className + " carousel-chevron-icons"}
+          style={{ ...style, display: "block", width:"10px" }}
+          onClick={onClick}
+        >
+          {returnIcon('chevron-rigth')}
+        </div>
+      );
+    }
+
      let settings = {
          dot: true,
          lazyLoad: true,
@@ -18,6 +43,8 @@ const CardsCarousel = (props) => {
          slidesToShow: 3,
          slidesToScroll: 1,
          cssEase: "liner",
+         nextArrow: <SampleNextArrow />,
+         prevArrow: <SamplePrevArrow />,
          responsive: [
             {
               breakpoint: 1024,
@@ -50,13 +77,15 @@ const CardsCarousel = (props) => {
 
             <div className="container-cards-slides">
                 <div className="slider-title"><h3 className="clr-green">Country</h3></div>
-                <div>
+                <div className="container-sliders">
                     <Slider {...settings}>
                         {SliderData.map((slide, index) => {
                             return (
-                            <div key={index} className="card-wrapper">
-                              <GlobalCard image={slide.image} title={slide.title} date={slide.date} place={slide.place} />
-                            </div>
+                              <div>
+                                <div key={index} className="card-wrapper">
+                                  <GlobalCard image={slide.image} title={slide.title} date={slide.date} place={slide.place} />
+                                </div>
+                              </div>
                             )
                         })}
                     </Slider>

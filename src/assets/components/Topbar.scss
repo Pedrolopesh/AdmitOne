@@ -1,28 +1,91 @@
+.fixed-header-scrool{
+    
+    @media screen and (max-height: 200px){
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;        
+        z-index: 500;
+    }
+}
+
 .header-desktop-logo{
     width: 91px;
     display: inline-block;
     margin-top: 5px;
     margin-bottom: 5px;
 
+    @media screen and (max-width: 1200px){
+        width: 155px;
+    }
+
     img{
         width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        
+        @media screen and (max-width: 1200px){
+            width: 50%;
+            margin-left: 5px;
+
+        }
     }
 }
 
-.header-desktop-nav{
-    display: flex;
+.container-header-desktop-nav{
+    max-width: 100%;
+    width: 38%;
     align-items: center;
+
+    @media screen and (max-width: 1200px){
+        width: 50%;
+    }
+
+    @media screen and (max-width: 900px){
+        width: 19%;
+    }
     
-    ul{
-        list-style: none;
-        margin-right: 35px;
-        padding-left: 0;
-        height: 100%;
+    @media screen and (max-width: 600px){
+        width: 40%;
+    }
+
+    .header-desktop-nav{
+        max-width: 100%;
+        width: 100%;
         display: flex;
         align-items: center;
+        
+        ul{
+            list-style: none;
+            margin-right: 35px;
+            padding-left: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        @media screen and (max-width: 900px){
+            display: none;
+        }
+    }
+
+    .mobile-nav-options{
+        display: none;
+
+        .bars-icon-menu{
+
+            svg{
+                width: 30px;
+                height: 25px;
+            }
+        }
+
+        @media screen and (max-width: 900px){
+            display: block;
+        }
     }
 }
-
+    
 .header-bg{
     background-color: #fc1498;
 }
@@ -54,7 +117,12 @@
     display: flex;
 }
 
-.seach-chevron-icon{
+.search-chevron-icon{
+    display: block;
+    width: 15px;
+}
+
+.chevron-icons{
     display: block;
     width: 15px;
 }

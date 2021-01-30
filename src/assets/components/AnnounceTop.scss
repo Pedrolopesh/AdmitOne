@@ -1,0 +1,52 @@
+.nowrap{
+    display: block;
+    white-space: nowrap;
+}
+
+.custom-announce-container{
+    @media screen and (max-width: 1700px){
+        display: none;
+    }
+}
+
+.container-animation-announces{
+    max-width: 100%;
+    width: 100%;
+    display: block;
+
+    animation-name: animation-scroll;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+
+    span{
+        display: flex;
+
+        &:first-child{
+            
+        }
+        
+        &:nth-child(2){
+
+        }
+        
+        &:nth-child(3){
+
+        }
+        
+    }
+}
+
+.announces-container{
+    max-width: 100%;
+    width: 100%;
+}
+
+@keyframes animation-scroll{
+    0%  {  
+        transform: translate( 0,0 ); 
+    }
+
+    100% { 
+        transform: translate( -100%, 0%); 
+    }
+}

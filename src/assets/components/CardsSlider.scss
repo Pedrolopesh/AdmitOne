@@ -1,4 +1,32 @@
 .slider-title{
     text-align: start;
-    // margin-bottom: 2vw;
+}
+
+.container-sliders{
+
+}
+
+.carousel-chevron-icons{
+    max-width: 100% !important;
+    width: 1% !important;
+
+    i{
+        width: 10px;
+    }
+
+}
+.carousel-chevron-rigth{
+    display: block;
+    svg{
+        width: 10px;
+        font-size: 10px;
+    }
+}
+
+.carousel-chevron-left{
+    display: block;
+    svg{
+        width: 10px;
+        font-size: 10px;
+    }
 }

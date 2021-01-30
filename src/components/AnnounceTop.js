@@ -13,7 +13,7 @@ const AnnounceTop = () => {
 
         const announcesData = [
             { link:'https://admitone.com/events/ferris-and-sylvester-vancouver-6682428', content:'FERRIS & SYLVESTER', date:'September 11th 2021'},
-            { link:'https://admitone.com/events/orchestral-rendition-of-daft-punk-6505354', content:'An Orchestral Rendition of Daft Punk', date:'September 18th 2021'},
+            { link:'https://admitone.com/events/orchestral-rendition-of-daft-punk-6505354', content:'An Orchestral Rendition', date:'September 18th 2021'},
             { link:'https://admitone.com/events/steve-hofstetter-6457048', content:'Steve Hofstetter - "The Dark Stuff" Com...', date:'July 4th 2021'},
             { link:'https://admitone.com/events/tanya-tucker-vancouver-2021', content:'Tanya Tucker - CMT Next Women of Countr...', date:'October 10th 2021'},
             { link:'https://admitone.com/events/bobby-bazini-vancouver-2021', content:'Bobby Bazini', date:'March 23rd 2021'},
@@ -34,25 +34,41 @@ const AnnounceTop = () => {
         dots: false,
         infinite: true,
         arrows: false,
-        slidesToShow: 6,
+        slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: true,
         speed: 10000,
         autoplaySpeed: 1000,
-        cssEase: "linear"
+        cssEase: "linear",
     };
 
     return(
 
-        <div className="mt-2 mb-1">
+        <div className="mt-2 mb-2 custom-announce-container">
+
+            {/* === SLIDER ANIMATION TO SCROLL AUTOMATIC === */}
+            {/* <div className="announces-container">
+                <span className=""> 
+                    <span className="container-animation-announces"> 
+                        {announcesData.map((announcements, index) => (
+                            <span className="nowrap">
+                                <a href={announcements.link} className="clr-white font_2"> {announcements.content} </a> 
+                                <span className="clr-pink font_2 font-w-700"> {announcements.date} </span>
+                            </span>
+                        ))}
+                    </span>
+                </span>
+            </div> */}
+            {/* === SLIDER ANIMATION TO SCROLL AUTOMATIC === */}
+
             <Slider {...settings}>
                 {announcesData.map((announcements, index) => (
                     
                     <div key={index} className="mr-2 d-flex">
                         <div className="mr-2 announces-container">
-                            <span className="">
+                            <span className="nowrap">
                                 <a href={announcements.link} className="clr-white font_2"> {announcements.content} </a> 
-                                <span className="clr-pink font_2 font-w-700"> {announcements.date} </span>
+                                <span className="clr-pink font_2 font-w-700 ml-0-5"> {announcements.date} </span>
                             </span>
                         </div>
                     </div>

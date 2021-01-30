@@ -1,23 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import GlobalCard from './GlobalCard';
 import { SliderData } from '../assets/images/sliderData';
 
 const EventsCards = (props) => {
-    const [limitCard, setLimitCard] = useState(false)
-    
-    useEffect(() => {
-        const limitCard = [0,1,2,3,4,5,6,7,8,9,10]
+    const [cardsToShow, setCardsToShow] = useState(6);
 
-        setLimitCard(limitCard)
-    }, [])
-
-    function setLimittoAll(){
-
-        console.log("ué")
-        console.log(props.slides.length)
-        let newLimit = props.slides
-        // setLimitCard(limitCard)
-        setLimitCard(newLimit)
+    //FUNCTION TO SHOW MORE ITEMS AT CARD
+    function showMoreItems(){
+        setCardsToShow(cardsToShow + 6)
     }
 
     return (
@@ -26,32 +16,36 @@ const EventsCards = (props) => {
                 <h3 className="clr-green alg-txt-c">MORE SHOWS</h3>
             </div>
 
-            <div className="row">
-            {SliderData.map((slides, index) => {
-                return(
-
-                    <div key={index} className="mt-2 mr-2">
-                    <div className="ac mt-2">
-                        {index === limitCard[index] &&
-                                // console.log(limitCard[index])
+            <div className="row event-card-grid">
+            {SliderData.map((slides, index) => (
+                <Fragment key={index}>
+                    {index < cardsToShow && 
+                        <div className="mt-2">
+                            <div className="ac mt-2">
+                                
                                 <GlobalCard 
                                     image={slides.image} 
                                     title={slides.title} 
                                     date={slides.date} 
                                     place={slides.place} 
                                 />
-                            }
-                    </div>
-                    </div>
-                )
-            })}            
+                                
+                            </div>
+                        </div>
+                    }
+                </Fragment>
+
+            ))}            
             </div>
 
-            <div className="justify-content-center row mt-5">
-                <button onClick={setLimittoAll} className="ac btn btn-ticket clr-white">
-                    Show More Events
-                </button>
-            </div>
+            {cardsToShow < SliderData.length &&
+
+                <div className="justify-content-center row mt-5">
+                    <button onClick={showMoreItems} className="ac btn btn-ticket clr-white">
+                        Show More Events
+                    </button>
+                </div>
+            }
 
         </div>
     )

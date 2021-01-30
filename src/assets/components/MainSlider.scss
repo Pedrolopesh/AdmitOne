@@ -3,13 +3,22 @@
     display: block;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 800px){
+        max-width: 100% !important;
+        width: 100% !important;
+    }
 }
 
-.slick-list{
-    // width: calc(100% - 80px);
+.slider-container{
+    @media screen and (max-width: 800px){
+        max-width: 100% !important;
+        width: 95% !important;
+    }
 }
 
 .image-slider{
+    max-width: 100%;
     width: 100%;
     border-radius: 30px;
 }
@@ -21,20 +30,19 @@
 
     .arrow{
         position: relative;
-        font-size: 3rem;
-        color: #000;
         z-index: 10;
         cursor: pointer;
         user-select: none;
+
+        svg{
+            max-width: 100%;
+            width: 25px;
+
+            @media screen and (max-width: 800px){
+                width: 35px;
+            }
+        }
     }
-}
-
-.rigth-arrow{
-
-}
-
-.left-arrow{
-
 }
 
 .slide{

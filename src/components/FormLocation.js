@@ -1,41 +1,47 @@
-import React, { useEffect, useState } from 'react';
-import SeachChevron from '../assets/icons/seach_chevron'
-import ChevronDowm from '../assets/icons/chevron_dowm'
+import React, { useState } from 'react';
+import { returnIcon } from '../assets/icons/icons';
 import InputCitySearch from './InputCitySearch';
 const TopBar = (props) =>{
-    const [visibleSelect, setVisibleSelect] = useState(false)  
+    const [visibleSelect, setVisibleSelect] = useState(true)  
+    const [selectedCity, setSelecedCity] = useState("")  
     
+
+    //FUNCTION TO TURN INPUT VISIBLE
     function selectCity(){
         if(!visibleSelect) setVisibleSelect(true)
         else setVisibleSelect(false)
+    }
+
+    //FUNCTION TO SET VALUE FROM THE INPUT
+    function setValueInput(params) {
+        setSelecedCity(params)
+        setVisibleSelect(true)
     }
 
     return(
         <form autoComplete="off">
             <div className="city-input-container">
                 <div className="city-input-text alg-itens-c">
-                    <p>City</p>
+                    {selectedCity == "" && <p>City</p>}
+                    {selectedCity != "" && <p>{selectedCity}</p>}
 
-                    {/* <span className="topbar-seach-chevron"> */}
-                        <div className="seach-chevron-icon ml-1 pointer">
-                            
+                        <div className="chevron-icons ml-1 pointer">
                             <span onClick={selectCity}>
-                                {visibleSelect && <ChevronDowm/>}
+                                {visibleSelect && returnIcon('chevron-up')}
                             </span>
 
                                 {!visibleSelect && 
                                     <div>
                                         <span onClick={selectCity}>
-                                            <SeachChevron />
+                                            { returnIcon('chevron-down') }
                                         </span>
-                                        <InputCitySearch />
                                     </div>
                                 }
                         </div>
-                        
-                    {/* </span> */}
                 </div>
+
             </div>
+            {!visibleSelect && <InputCitySearch triggerParent={setValueInput}/>}
         </form>
     )
 }

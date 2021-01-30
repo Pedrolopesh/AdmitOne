@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { SliderData } from '../assets/images/sliderData';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/all';
+import { returnIcon } from '../assets/icons/icons';
+
 
 const CarouselBanner = (props) =>{
     const [ currentImage, setCurrentImage ] = useState(0)
@@ -23,16 +25,18 @@ const CarouselBanner = (props) =>{
     return(
         <div className="slider mt-4 container ac">
             <div className="d-flex">
-                <div className="d-flex ac">
+                <div className="d-flex ac slider-container">
                     <div className="container-arrow icon-color-main">
-                        <IoIosArrowBack className="left-arrow arrow" onClick={prevSlide}/>
+                        <span className="arrow mr-1" onClick={prevSlide}>
+                            {returnIcon('chevron-left')}
+                        </span>
                     </div>
                         <div className="slick-list">
                             <div className="">
 
                             {SliderData.map((slide, index) => {
                                 return (
-                                    <div key={index}className={index === currentImage ? 'slide active' : 'slide'}>
+                                    <div key={index} className={index === currentImage ? 'slide active' : 'slide'}>
                                         <a href={slide.link}>
                                             {index === currentImage && (
                                                 <img key={index} src={slide.image} alt="images" className="image-slider"/>
@@ -45,7 +49,9 @@ const CarouselBanner = (props) =>{
                             </div>
                         </div>
                     <div className="container-arrow icon-color-main">
-                        <IoIosArrowForward className="rigth-arrow arrow" onClick={nextSlide}/>
+                        <span className="arrow ml-1" onClick={nextSlide}>
+                            {returnIcon('chevron-rigth')}
+                        </span>
                     </div>               
                 </div>
             </div>
