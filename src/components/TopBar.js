@@ -31,11 +31,11 @@ const TopBar = (props) =>{
                 <div className="d-flex container-header-desktop-nav">
                     <div className="header-desktop-nav">
                         <ul>
-                            <li><a className="font-s-15 clr-white font-w-700 mr-1">Events</a></li>
-                            <li><a className="font-s-15 clr-white font-w-700 mr-1">Venues</a></li>
-                            <li><a className="font-s-15 clr-white font-w-700 mr-1">Artists</a></li>
-                            <li><a className="font-s-15 clr-white font-w-700 mr-1">SIGN UP</a></li>
-                            <li><a className="font-s-15 clr-white font-w-700 mr-1">WIN</a></li>
+                            <li><a className="font-s-15 clr-white font-w-700 mr-1 pointer" href="#" target="_blank">Events</a></li>
+                            <li><a className="font-s-15 clr-white font-w-700 mr-1 pointer" href="#" target="_blank">Venues</a></li>
+                            <li><a className="font-s-15 clr-white font-w-700 mr-1 pointer" href="#" target="_blank">Artists</a></li>
+                            <li><a className="font-s-15 clr-white font-w-700 mr-1 pointer" href="#" target="_blank">SIGN UP</a></li>
+                            <li><a className="font-s-15 clr-white font-w-700 mr-1 pointer" href="#" target="_blank">WIN</a></li>
                             <span className="topbar-icon icon-color-white">{returnIcon('moon-icon')}</span>
     
                             {/* === CHANGE THEME FUNCTION === */}

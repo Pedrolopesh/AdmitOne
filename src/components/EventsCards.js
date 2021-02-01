@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import GlobalCard from './GlobalCard';
-import { SliderData } from '../assets/images/sliderData';
+import { CardsData } from '../assets/images/cardsImagesData';
 
 const EventsCards = (props) => {
     const [cardsToShow, setCardsToShow] = useState(6);
@@ -17,7 +17,7 @@ const EventsCards = (props) => {
             </div>
 
             <div className="row event-card-grid">
-            {SliderData.map((slides, index) => (
+            {CardsData.map((slides, index) => (
                 <Fragment key={index}>
                     {index < cardsToShow && 
                         <div className="mt-2">
@@ -38,7 +38,7 @@ const EventsCards = (props) => {
             ))}            
             </div>
 
-            {cardsToShow < SliderData.length &&
+            {cardsToShow < CardsData.length &&
 
                 <div className="justify-content-center row mt-5">
                     <button onClick={showMoreItems} className="ac btn btn-ticket clr-white">

@@ -64,6 +64,13 @@
             align-items: center;
         }
 
+        a{
+            &:hover{
+                transition: 1s;
+                border-bottom: 1px solid white;
+            }
+        }
+
         @media screen and (max-width: 900px){
             display: none;
         }

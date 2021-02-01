@@ -136,15 +136,17 @@
     }
 }
 .social-icons li a:hover{
-    background: #1c1c1c;
+    background: #fff;
+    color: #fc1498;
 }
 
 .social-icons li a .fa {
     transition: 0.1s;
-
+    
     &:hover{
         transform: translateY(360deg);
-        color: #fff;
+        color: #fc1498;
+        // color: #fff;
     }
 }
 

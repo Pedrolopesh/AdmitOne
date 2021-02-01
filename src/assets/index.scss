@@ -61,11 +61,18 @@ footer{
 
 .footer-nav{
     flex-direction: row;
-
+    
     li{
         margin-right: 1rem;
         @media screen and (max-width: 700px){
             margin: 0;
+        }
+    
+        a{
+            &:hover{
+                transition: 1s;
+                border-bottom: 1px solid white;
+            }
         }
     }
 
