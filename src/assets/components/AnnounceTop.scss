@@ -32,10 +32,9 @@
     max-width: 100%;
     width: 100%;
     
-    // transform: translate( -98%, 0);
     animation-delay: 0.1s;
     animation-name: animation-scroll-copy;
-    animation-duration: 10s;
+    animation-duration: 100s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     background-color: #1c1c1c;
@@ -50,9 +49,9 @@
     max-width: 100%;
     width: 100%;
     display: flex;
-    // transform: translate( 1%, 0);
+
     animation-name: animation-scroll;
-    animation-duration: 10s;
+    animation-duration: 100s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     

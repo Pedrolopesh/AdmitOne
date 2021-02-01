@@ -33,7 +33,7 @@ const Home = (props) =>{
             </header>
 
             {/* <nav className="mobile-menu-open"> */}
-            <nav className={visibleMenu ? 'mobile-menu-open' : 'hide-menu'}>
+            <nav className={visibleMenu ? 'mobile-menu-open show-menu"' : 'hide-menu'}>
                 <MobileMenu triggerCloseNavBar={controlMenuBar}/>
             </nav>
 

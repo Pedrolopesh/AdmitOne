@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState, useEffect} from 'react';
 import Slider from 'react-slick';
 import { returnIcon } from '../assets/icons/icons';
 import GlobalCard from './GlobalCard';
@@ -6,27 +6,41 @@ import GlobalCard from './GlobalCard';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import { SliderData } from '../assets/images/sliderData';
+import { CardsData } from '../assets/images/cardsImagesData';
 
 const CardsCarousel = (props) => {
+
+  const [eventsTypes, setEventsTypes] = useState([]);
+
+  useEffect(() => {
+    const eventsTypes = [
+      {name:'Rock'},
+      {name: 'Hip Hop'}, 
+      {name:'Pop'}
+    ]
+    setEventsTypes(eventsTypes)
+  }, [])
+
+    //FUNTION TO RETURN CUSTOM RIGTH ARROW
     function SampleNextArrow(props) {
       const { className, style, onClick } = props;
       return (
         <div
-          className={className + " carousel-chevron-icons"}
-          style={{ ...style, display: "block", width:"10px" }}
-          onClick={onClick}
+        className={className}
+        style={{ ...style, display: "block", width:"10px" }}
+        onClick={onClick}
         >
           {returnIcon('chevron-rigth')}
         </div>
       );
     }
     
+    //FUNTION TO RETURN CUSTOM LEFT ARROW
     function SamplePrevArrow(props) {
       const { className, style, onClick } = props;
       return (
         <div
-          className={className + " carousel-chevron-icons"}
+          className={className}
           style={{ ...style, display: "block", width:"10px" }}
           onClick={onClick}
         >
@@ -75,22 +89,28 @@ const CardsCarousel = (props) => {
     return (
         <div className="container ac mt-8">
 
-            <div className="container-cards-slides">
-                <div className="slider-title"><h3 className="clr-green">Country</h3></div>
-                <div className="container-sliders">
-                    <Slider {...settings}>
-                        {SliderData.map((slide, index) => {
-                            return (
-                              <div>
-                                <div key={index} className="card-wrapper">
-                                  <GlobalCard image={slide.image} title={slide.title} date={slide.date} place={slide.place} />
-                                </div>
-                              </div>
-                            )
-                        })}
-                    </Slider>
+            {eventsTypes.map((types, index) => (
+            
+            <Fragment key={index}> 
+                <div className="container-cards-slides">
+                  <div className="slider-title"><h3 className="clr-green">{ types.name }</h3></div>
+                    <div className="container-sliders">
+                        <Slider {...settings}>
+                            {CardsData.map((slide, index) => {
+                                return (
+                                  <div key={index}>
+                                    <div className="card-wrapper">
+                                      <GlobalCard image={slide.image} title={slide.title} date={slide.date} place={slide.place} />
+                                    </div>
+                                  </div>
+                                )
+                            })}
+                        </Slider>
+                    </div>
                 </div>
-            </div>
+            </Fragment>
+            
+            ))}
 
         </div>
     )

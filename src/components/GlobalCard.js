@@ -9,7 +9,7 @@ const GlobalCard = (props) => {
 
                 <div className="card-image">
                     <div className="image-box">
-                        <img src={props.image}/>
+                        <img src={props.image} className="image-card-container"/>
                         <div className="image-details alg-txt-c">
                             <h3 className="mb-2 mt-0 font-w-700"> {props.title} </h3>
                             <p className="mb-2 clr-pink"> <strong> {props.date} </strong> </p>

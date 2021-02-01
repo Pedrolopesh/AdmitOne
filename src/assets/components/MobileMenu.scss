@@ -1,3 +1,16 @@
+.show-menu{
+
+    animation-name: animation-menu;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes animation-menu{
+    0%{ opacity: 0; }
+    100%{ opacity: 1; }
+}
+
 .mobile-menu-open{
     position: fixed;
     top: 0vh;

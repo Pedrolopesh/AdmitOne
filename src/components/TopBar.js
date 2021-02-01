@@ -36,11 +36,14 @@ const TopBar = (props) =>{
                             <li><a className="font-s-15 clr-white font-w-700 mr-1">Artists</a></li>
                             <li><a className="font-s-15 clr-white font-w-700 mr-1">SIGN UP</a></li>
                             <li><a className="font-s-15 clr-white font-w-700 mr-1">WIN</a></li>
-                            <li className="pointer" onClick={changeTheme}> 
-                          
-                                    {!theme && <span className="topbar-icon icon-color-white">{returnIcon('moon-icon')}</span>}
-                                    {theme && <span className="topbar-icon icon-color-white">{returnIcon('sun-icon')}</span>}
-                            </li>
+                            <span className="topbar-icon icon-color-white">{returnIcon('moon-icon')}</span>
+    
+                            {/* === CHANGE THEME FUNCTION === */}
+                            {/* <li className="pointer" onClick={changeTheme}> 
+                                {!theme && <span className="topbar-icon icon-color-white">{returnIcon('moon-icon')}</span>}
+                                {theme && <span className="topbar-icon icon-color-white">{returnIcon('sun-icon')}</span>}
+                            </li> */}
+                            {/* === CHANGE THEME FUNCTION === */}
                         </ul>
                     </div>
 

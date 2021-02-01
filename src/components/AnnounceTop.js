@@ -51,7 +51,7 @@ const AnnounceTop = () => {
                 <div className="annouce-wrap"> 
                         <span className="container-animation-announces"> 
                         {announcesData.map((announcements, index) => (
-                            <span className="nowrap mr-2 ml-3">
+                            <span key={index} className="nowrap mr-2 ml-3">
                                 <a href={announcements.link} className="clr-white font_2"> {announcements.content} </a> 
                                 <span className="clr-pink font_2 font-w-700"> {announcements.date} </span>
                             </span>
@@ -60,7 +60,7 @@ const AnnounceTop = () => {
 
                         <span className="container-animation-announces-copy"> 
                         {announcesData.map((announcements, index) => (
-                            <span className="nowrap mr-2 ml-2">
+                            <span key={index} className="nowrap mr-2 ml-2">
                                 <a href={announcements.link} className="clr-white font_2"> {announcements.content} </a> 
                                 <span className="clr-pink font_2 font-w-700"> {announcements.date} </span>
                             </span>
