@@ -30,38 +30,49 @@ const AnnounceTop = () => {
     }, [])
 
     
-    const settings = {
-        dots: false,
-        infinite: true,
-        arrows: false,
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        autoplay: true,
-        speed: 10000,
-        autoplaySpeed: 1000,
-        cssEase: "linear",
-    };
+    // const settings = {
+    //     dots: false,
+    //     infinite: true,
+    //     arrows: false,
+    //     slidesToShow: 5,
+    //     slidesToScroll: 1,
+    //     autoplay: true,
+    //     speed: 10000,
+    //     autoplaySpeed: 1000,
+    //     cssEase: "linear",
+    // };
 
     return(
 
-        <div className="mt-2 mb-2 custom-announce-container">
+        <div className="mt-2 mb-2">
 
             {/* === SLIDER ANIMATION TO SCROLL AUTOMATIC === */}
-            {/* <div className="announces-container">
-                <span className=""> 
-                    <span className="container-animation-announces"> 
+            <div className="announces-container">
+                <div className="annouce-wrap"> 
+                        <span className="container-animation-announces"> 
                         {announcesData.map((announcements, index) => (
-                            <span className="nowrap">
+                            <span className="nowrap mr-2 ml-3">
                                 <a href={announcements.link} className="clr-white font_2"> {announcements.content} </a> 
                                 <span className="clr-pink font_2 font-w-700"> {announcements.date} </span>
                             </span>
                         ))}
-                    </span>
-                </span>
-            </div> */}
+                        </span>
+
+                        <span className="container-animation-announces-copy"> 
+                        {announcesData.map((announcements, index) => (
+                            <span className="nowrap mr-2 ml-2">
+                                <a href={announcements.link} className="clr-white font_2"> {announcements.content} </a> 
+                                <span className="clr-pink font_2 font-w-700"> {announcements.date} </span>
+                            </span>
+                        ))}
+                        </span>
+                </div>
+            </div>
             {/* === SLIDER ANIMATION TO SCROLL AUTOMATIC === */}
 
-            <Slider {...settings}>
+            {/* === SLIDER ANIMATION CREATED COMPONENT === */}
+            
+            {/* <Slider {...settings}>
                 {announcesData.map((announcements, index) => (
                     
                     <div key={index} className="mr-2 d-flex">
@@ -74,7 +85,9 @@ const AnnounceTop = () => {
                     </div>
                     
                 ))}
-            </Slider>
+            </Slider> */}
+
+            {/* === SLIDER ANIMATION CREATED COMPONENT === */}
         </div>
     )
 }

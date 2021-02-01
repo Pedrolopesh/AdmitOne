@@ -9,44 +9,91 @@
     }
 }
 
+.announces-container{
+    overflow: hidden;   
+    max-width: 100%;
+    width: 100%;
+}
+.annouce-wrap{
+    display: flex;
+    overflow: hidden;
+    width: calc(145vw - 20px);
+    box-sizing: content-box;
+    animation-play-state: paused;
+
+    min-height: 20px;
+    line-height: 20px;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    
+}
+.container-animation-announces-copy{
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    
+    // transform: translate( -98%, 0);
+    animation-delay: 0.1s;
+    animation-name: animation-scroll-copy;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    background-color: #1c1c1c;
+
+
+    span{
+        &:nth-child(3){ }
+    }
+}
+
 .container-animation-announces{
     max-width: 100%;
     width: 100%;
-    display: block;
-
+    display: flex;
+    // transform: translate( 1%, 0);
     animation-name: animation-scroll;
-    animation-duration: 50s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-
+    animation-timing-function: linear;
+    
     span{
         display: flex;
-
-        &:first-child{
-            
+        margin-left: 10px;
+        
+        &:last-child{
         }
         
-        &:nth-child(2){
-
-        }
-        
-        &:nth-child(3){
-
+        &:nth-child(10){
         }
         
     }
-}
-
-.announces-container{
-    max-width: 100%;
-    width: 100%;
 }
 
 @keyframes animation-scroll{
-    0%  {  
-        transform: translate( 0,0 ); 
-    }
+    0% {transform: translate( 0,0 ); }
+    // 10%{transform: translate( -10%, 0); }
+    // 20%{transform: translate( -20%, 0); }
+    // 30%{transform: translate( -30%, 0); }
+    // 40%{transform: translate( -40%, 0); }
+    // 50%{transform: translate( -50%, 0); }
+    // 60%{transform: translate( -60%, 0); }
+    // 70%{transform: translate( -70%, 0); }
+    // 80%{transform: translate( -80%, 0); }
+    // 90%{transform: translate( -90%, 0); }
+    99% { transform: translate( -103.7%, 0); }
+}
 
-    100% { 
-        transform: translate( -100%, 0%); 
-    }
+@keyframes animation-scroll-copy{
+    0% {transform: translate( -1.5%, 0); }
+    // 10%{transform: translate( -16.5%, 0); }
+    // 20%{transform: translate( -26.5%, 0); }
+    // 30%{transform: translate( -36.5%, 0); }
+    // 40%{transform: translate( -46.5%, 0); }
+    // 50%{transform: translate( -56.5%, 0); }
+    // 60%{transform: translate( -66.5%, 0); }
+    // 70%{transform: translate( -76.5%, 0); }
+    // 80%{transform: translate( -86.5%, 0); }
+    // 90%{transform: translate( -96.5%, 0); }
+    // 100%{transform: translate( -107%, 0); }
+    100%{transform: translate( -100.4%, 0); }
 }
